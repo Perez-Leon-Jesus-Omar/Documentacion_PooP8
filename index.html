@@ -13,10 +13,12 @@
         tmpTargetPage = "undefined";
     targetPage = tmpTargetPage;
     function validURL(url) {
+        
         try {
-            url = decodeURIComponent(url);
+            url = decodeURIComponent(url); 
         }
         catch (error) {
+            
             return false;
         }
         var pos = url.indexOf(".html");
@@ -46,6 +48,7 @@
                 if (ch == '.')
                      seenDot = true;
                 if (ch == '/' && seenDot)
+                    
                      return false;
             } else {
                 return false;
